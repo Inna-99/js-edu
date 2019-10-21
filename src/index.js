@@ -10,7 +10,11 @@ module.exports = function getTimeForEducation(
     config = {family: 4}
     ) 
   { 
-    let hours = knowsProgramming === true ? 800 : 1300;
+
+    const basicPrinciples = 500;
+    const fullCompleteHours = 800;
+    const longWayHours = basicPrinciples + fullCompleteHours;
+    let hours = knowsProgramming === true ? fullCompleteHours : longWayHours;
     return Math.ceil(hours / config[focus]);
   };
   
